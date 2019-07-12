@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>霓虹灯</title>
+</head>
+<body>
+
+<script>
+var Tname="●●●●●●●●●●●●●●●●●●●●●！";
+var Tlen=Tname.length;
+document.write("<div id='a' style='font-size:50px;'>"+Tname+"</div>");
+var col=new Array("#FF1111","#16A951","#E4007F","#1685A9","#003472","#CCCCCC","#FFAAAA","#CCFFCC");
+var ic=0;
+function Dcolor(){
+ var Strname="";
+ for (i=0;i<Tlen;++i){
+  var Strname=Strname+"<font color="+col[ic]+">"+Tname.substring(i,i+1)+"</font>";
+ ic=ic+1;
+  if (ic==col.length) ic=0;
+ }
+ a.innerHTML=Strname;
+ setTimeout("Dcolor()",500);
+}
+Dcolor();
+</script>
+
+<span class="style5"></span>
+</body>
+</html>
